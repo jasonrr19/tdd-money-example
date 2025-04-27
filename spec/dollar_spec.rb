@@ -1,4 +1,4 @@
-# require_relative '../lib/dollar'
+require_relative '../lib/dollar'
 
 RSpec.describe Dollar do
   it 'multiplies correctly' do
