@@ -1,4 +1,5 @@
 require_relative '../lib/dollar'
+require_relative '../lib/franc'
 
 RSpec.describe Dollar do
   it 'multiplies correctly' do
@@ -6,6 +7,12 @@ RSpec.describe Dollar do
     expect(Dollar.new(10)).to eq(five.times(2))
     expect(Dollar.new(15)).to eq(five.times(3))
   end
+
+    it "correctly multiplies francs by a number" do
+      five = Franc.new(5)
+      expect(five.times(2)).to eq(Franc.new(10))
+      expect(five.times(3)).to eq(Franc.new(15))
+    end
 
   # it 'equates when amounts are the same' do
   #   expect(Dollar.new(5).equals(Dollar.new(5))).to be true
