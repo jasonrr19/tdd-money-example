@@ -1,4 +1,5 @@
-class Dollar
+require_relative 'money'
+class Dollar < Money
   attr_reader :amount
 
   def initialize(amount)
