@@ -25,4 +25,13 @@ RSpec.describe Dollar do
     expect(Dollar.new(5)).to eq(Dollar.new(5))# Using `==` for comparison
     expect(Dollar.new(5)).to_not eq(Dollar.new(6)) # Using `==` for comparison
   end
+
+it 'tests equality between money objects' do
+  expect(Money.dollar(5)).to eq(Money.dollar(5))
+  expect(Money.dollar(5)).not_to eq(Money.dollar(6))
+  expect(Money.franc(5)).to eq(Money.franc(5))
+  expect(Money.franc(5)).not_to eq(Money.franc(6))
+  expect(Money.dollar(5)).not_to eq(Money.franc(5))
+end
+
 end

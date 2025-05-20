@@ -3,7 +3,8 @@ class Dollar < Money
   attr_reader :amount
 
   def initialize(amount)
-    @amount = amount
+    super(amount)
+    # @amount = amount
   end
 
   def times(multiplier)

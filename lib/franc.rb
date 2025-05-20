@@ -1,8 +1,10 @@
-class Franc
-  attr_reader :amount
+require_relative 'money'
+
+class Franc < Money
+  # attr_reader :amount
 
   def initialize(amount)
-    @amount = amount
+    # @amount = amount
   end
 
   def times(multiplier)
@@ -15,6 +17,6 @@ class Franc
   # end
 
   def ==(other)#.equals is built into ruby, I need to define how I want it to compare because I need to check the internal state.
-    other.is_a?(Franc) && @amount == other.amount
+    other.is_a?(Money) && @amount == other.amount
   end
 end
